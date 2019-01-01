@@ -24,23 +24,25 @@ X = 2 * X / float(max) - 1
 y = np.loadtxt("../dataset/Y.txt", delimiter=",").reshape(X.__len__(), 1)
 
 epochs = 600
-
-a = NN(X, y)
-print a.get_error()
+generations = 2
+best_n_children = 4
 
 ## Generate a poblation of neural networks each trained from a random starting weigth
 ## ordered by the best performers (low error)
-pob = [NN(X, y) for i in range(10)]
-pob = sorted([(nn.get_error(), nn) for nn in pob])
+init_pob = [NN(X, y) for i in range(10)]
+init_pob = sorted([(nn.get_error(), nn) for nn in init_pob])
 
-best_candidate = pob[1][1].get_weight()
-second_canditate = pob[1][1].get_weight()
-
-w_child = mate(best_candidate, second_canditate)
+pob = []
 print "---"
-a = NN(X, y, w_child)
 
-print pob
+for i in range(10):
+    best_candidate = init_pob[np.random.randint(best_n_children)][1].get_weight()
+    second_canditate = init_pob[np.random.randint(best_n_children)][1].get_weight()
+    w_child = mate(best_candidate, second_canditate)
+    aux = NN(X, y, w_child)
+    pob += [tuple( (aux.get_error(),aux ) )]
+
+print sorted(pob)
 # #synapses
 # w0a = 2*np.random.random((X.size/X.__len__(),1)) - 1
 # w0b = 2*np.random.random((X.size/X.__len__(),1)) - 1
