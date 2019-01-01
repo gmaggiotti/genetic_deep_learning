@@ -33,8 +33,8 @@ print a.get_error()
 pob = [NN(X, y) for i in range(10)]
 pob = sorted([(nn.get_error(), nn) for nn in pob])
 
-best_candidate = pob[1][1].get_weigth()
-second_canditate = pob[1][1].get_weigth()
+best_candidate = pob[1][1].get_weight()
+second_canditate = pob[1][1].get_weight()
 
 w_child = mate(best_candidate, second_canditate)
 print "---"

@@ -26,7 +26,7 @@ class NN:
             adjustment = self.l1_error*sigmoid(l1, deriv=True)
             self.w0 += X.T.dot(adjustment)
 
-    def get_weigth(self):
+    def get_weight(self):
         return self.w0
 
     def get_error(self):
