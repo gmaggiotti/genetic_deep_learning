@@ -7,3 +7,5 @@ Main problems to solve when NN:
 - Hyperparameter optimization: refers to choosing values of hyperparameters like - learning rate, optimization algorithm, dropout rate, batch size, etc. 
 
 - Weight optimization: fiend the right values for each neuron within each weight in order to solve the gereal equation with a minimum error.
+
+This projects focus on using Genetic Algorithms combined with Gradient Descent to create a novel method of solve the weight optimization problem.
