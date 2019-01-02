@@ -20,7 +20,7 @@ class NN:
             l1 = sigmoid(np.dot(X, self.w0))
             self.l1_error = y - l1
 
-            if(j % 10) == 0:   # Only print the error every 10000 steps.
+            if(j % 100) == 0:   # Only print the error every 10000 steps.
                 print("Error: " + str(np.mean(np.abs(self.l1_error))))
 
             adjustment = self.l1_error*sigmoid(l1, deriv=True)

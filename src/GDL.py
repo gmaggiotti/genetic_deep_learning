@@ -36,9 +36,9 @@ pob = []
 print "---"
 
 for i in range(10):
-    best_candidate = init_pob[np.random.randint(best_n_children)][1].get_weight()
-    second_canditate = init_pob[np.random.randint(best_n_children)][1].get_weight()
-    w_child = mate(best_candidate, second_canditate)
+    candidate1 = init_pob[np.random.randint(best_n_children)][1].get_weight()
+    candidate2 = init_pob[np.random.randint(best_n_children)][1].get_weight()
+    w_child = mate(candidate1, candidate2)
     aux = NN(X, y, w_child)
     pob += [tuple( (aux.get_error(),aux ) )]
 
