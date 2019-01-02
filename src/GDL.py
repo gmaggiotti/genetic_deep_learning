@@ -24,25 +24,33 @@ X = 2 * X / float(max) - 1
 y = np.loadtxt("../dataset/Y.txt", delimiter=",").reshape(X.__len__(), 1)
 
 epochs = 600
-generations = 2
 best_n_children = 4
+population_size = 10
+gen ={}
+generations = 5
+
 
 ## Generate a poblation of neural networks each trained from a random starting weigth
 ## ordered by the best performers (low error)
 init_pob = [NN(X, y) for i in range(10)]
 init_pob = sorted([(nn.get_error(), nn) for nn in init_pob])
 
-pob = []
+gen[0]=init_pob
 print "---"
 
-for i in range(10):
-    candidate1 = init_pob[np.random.randint(best_n_children)][1].get_weight()
-    candidate2 = init_pob[np.random.randint(best_n_children)][1].get_weight()
-    w_child = mate(candidate1, candidate2)
-    aux = NN(X, y, w_child)
-    pob += [tuple( (aux.get_error(),aux ) )]
+for x in range(1,generations):
+    population = []
+    print "--- gen ---"
+    for i in range(population_size):
+        candidate1 = init_pob[np.random.randint(best_n_children)][1].get_weight()
+        candidate2 = init_pob[np.random.randint(best_n_children)][1].get_weight()
+        w_child = mate(candidate1, candidate2)
+        aux = NN(X, y, w_child)
+        population += [tuple((aux.get_error(), aux))]
+    gen[x]=sorted(population)
+    del population
 
-print sorted(pob)
+print sorted(population)
 # #synapses
 # w0a = 2*np.random.random((X.size/X.__len__(),1)) - 1
 # w0b = 2*np.random.random((X.size/X.__len__(),1)) - 1
