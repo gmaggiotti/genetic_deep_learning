@@ -23,16 +23,16 @@ X = 2 * X / float(max) - 1
 # output, are the one-hot encoded labels
 y = np.loadtxt("../dataset/Y.txt", delimiter=",").reshape(X.__len__(), 1)
 
-epochs = 600
+epochs=6000
 best_n_children = 4
 population_size = 10
 gen ={}
-generations = 5
+generations = 3
 
 
 ## Generate a poblation of neural networks each trained from a random starting weigth
 ## ordered by the best performers (low error)
-init_pob = [NN(X, y) for i in range(10)]
+init_pob = [NN(X, y,epochs) for i in range(10)]
 init_pob = sorted([(nn.get_error(), nn) for nn in init_pob])
 
 gen[0]=init_pob
@@ -40,58 +40,15 @@ print "---"
 
 for x in range(1,generations):
     population = []
-    print "--- gen ---"
+    print("--- generation {} ---".format(x))
     for i in range(population_size):
         candidate1 = init_pob[np.random.randint(best_n_children)][1].get_weight()
         candidate2 = init_pob[np.random.randint(best_n_children)][1].get_weight()
         w_child = mate(candidate1, candidate2)
-        aux = NN(X, y, w_child)
+        aux = NN(X, y, epochs, w_child)
         population += [tuple((aux.get_error(), aux))]
     gen[x]=sorted(population)
     del population
 
-print sorted(population)
-# #synapses
-# w0a = 2*np.random.random((X.size/X.__len__(),1)) - 1
-# w0b = 2*np.random.random((X.size/X.__len__(),1)) - 1
-#
-# # This is the main training loop. The output shows the evolution of the error between the model and desired. The error steadily decreases.
-# for j in xrange(epochs):
-#
-#     l1a = sigmoid(np.dot(X, w0a))
-#     l1b = sigmoid(np.dot(X, w0b))
-#
-#     # Error back propagation of errors using the chain rule.
-#     l1a_error = y - l1a
-#     l1b_error = y - l1b
-#     if(j % 10) == 0:   # Only print the error every 10000 steps, to save time and limit the amount of output.
-#         print("Error a: " + str(np.mean(np.abs(l1a_error))) + "Error b: " + str(np.mean(np.abs(l1b_error))))
-#
-#     adjustmenta = l1a_error*sigmoid(l1a, deriv=True)
-#     adjustmentb = l1b_error*sigmoid(l1b, deriv=True)
-#
-#     #update weights (no learning rate term)
-#     w0a += X.T.dot(adjustmenta)
-#     w0b += X.T.dot(adjustmentb)
-#
-# print("------")
-#
-# w0c = mate(w0a,w0b)
-#
-#
-#
-# for j in xrange(epochs):
-#
-#     l1c = sigmoid(np.dot(X, w0c))
-#
-#     # Error back propagation of errors using the chain rule.
-#     l1c_error = y - l1c
-#     if(j % 10) == 0:   # Only print the error every 10000 steps, to save time and limit the amount of output.
-#         print("Error a: " + str(np.mean(np.abs(l1c_error))))
-#
-#     adjustmentc = l1c_error*sigmoid(l1c, deriv=True)
-#
-#     #update weights (no learning rate term)
-#     w0c += X.T.dot(adjustmentc)
-#
-#
+print 'EoF'
+NN(X,y,6000)

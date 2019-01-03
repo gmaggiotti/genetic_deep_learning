@@ -1,7 +1,6 @@
 import numpy as np
 import os
 
-epochs = 60
 
 def sigmoid(x, deriv=False):
     if(deriv == True):
@@ -10,7 +9,7 @@ def sigmoid(x, deriv=False):
 
 class NN:
 
-    def __init__(self, X, y, w=None):
+    def __init__(self, X, y, epochs, w=None):
         self.l1_error = 0
         if(w == None ):
             self.w0 = 2*np.random.random((X.size/X.__len__(),1)) - 1
