@@ -11,3 +11,7 @@ Main problems to solve with NN:
 this project focuses on solving the third of the problems, using Genetic Algorithms combined with Gradient Descent to create a novel method of solving the weight optimization problem.
 
 
+## Weight Crossover Intuition
+![](img/eeg.png)
+
+
