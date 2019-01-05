@@ -1,5 +1,5 @@
 # Genetic Deep Learning
-This project aims to use genetic algorithms to boost the learning of DNN.  Building and training a family  of NN with same structure and hyperparameters from scratch but starting from different random weights.   After a few epochs of training, choose the networks that perform the best and crossover their weights together in order to produce the next generation. 
+This project aims to use genetic algorithms to boost the learning of DNN.  Building and training a family  of NN with same structure and hyperparameters from scratch but starting from different random weights.   After a few epochs of training, choose the networks that perform the best and crossover their weights together in order to mating between pairs and produce the next generation. 
 
 Main problems to solve with NN:
 
