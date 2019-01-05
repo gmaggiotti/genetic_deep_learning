@@ -29,10 +29,6 @@ def read_dataset():
 X, Y = read_dataset()
 train_x, test_x, train_y, test_y = train_test_split(X, Y, test_size=0.2, random_state=1)
 
-epochs = 600
-best_n_children = 4
-population_size = 10
-gen = {}
-generations = 10
+epochs = 6000
 
 nn1 = NN1(train_x, train_y, 6000, print_step=600)
