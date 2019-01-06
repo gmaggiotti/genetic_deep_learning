@@ -13,5 +13,6 @@ this project focuses on solving the third of the problems, using Genetic Algorit
 
 ## Weight Crossover Intuition
 ![](img/image1.png)
+![](img/loss.png)
 
 
