@@ -6,9 +6,9 @@ Main problems to solve with NN:
 - Architecture optimization:finding optimal layers and number of nodes in each layer of the network required to capture features from given data.
 - Hyperparameter optimization: refers to choosing values of hyperparameters like - learning rate, optimization algorithm, dropout rate, batch size, etc. 
 
-- Weight optimization: fiend the right values for each neuron within each weight in order to solve the general equation with a minimum error.
+- Weight optimization: find the right values for each neuron within each weight in order to solve the general equation with a minimum error.
 
-this project focuses on solving the third of the problems, using Genetic Algorithms combined with Gradient Descent implement method of solving the weight optimization problem.
+This project focuses on solving the third of the problems, using Genetic Algorithms combined with Gradient Descent to implement a method for solving the weight optimization problem faster.
 
 
 ## Intuition of how gradients of the new generation improves the chosen slope when mating the fittest
