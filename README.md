@@ -8,7 +8,7 @@ Main problems to solve with NN:
 
 - Weight optimization: find the right values for each neuron within each weight in order to solve the general equation with a minimum error.
 
-This project focuses on solving the third of the problems, using Genetic Algorithms combined with Gradient Descent to implement a method for solving the weight optimization problem faster.
+This project is focused on solving weight optimization, using Genetic Algorithms combined with Gradient Descent to implement a method for solving the weight optimization problem faster.
 
 
 ## Intuition of how gradients of the new generations improves the chosen slope when mating the fittest
