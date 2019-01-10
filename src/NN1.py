@@ -10,8 +10,6 @@ def sigmoid(x, deriv=False):
     return 1 / (1 + np.exp(-x))
 
 
-
-
 class NN1:
     def __init__(self, train_x, train_y, test_x, test_y, epochs, w=None, print_step=None):
         self.l1_error = 0
