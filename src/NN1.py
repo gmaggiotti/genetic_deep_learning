@@ -1,13 +1,7 @@
 import numpy as np
-import os
+from nn_utils import sigmoid
 
 learning_rate = 0.001
-
-
-def sigmoid(x, deriv=False):
-    if (deriv == True):
-        return x * (1 - x)
-    return 1 / (1 + np.exp(-x))
 
 
 class NN1:
