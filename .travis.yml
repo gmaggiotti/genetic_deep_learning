@@ -20,4 +20,4 @@ before_commit:
 
 # command to run tests
 script:
-  - python GDNN_one_layer.py
+  - python src/GDNN_one_layer.py
