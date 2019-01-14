@@ -5,25 +5,41 @@ learning_rate = 0.001
 
 
 def sigmoid(x, deriv=False):
-    if (deriv == True):
+    if (deriv):
         return x * (1 - x)
     return 1 / (1 + np.exp(-x))
 
 
 class NN1:
-    def __init__(self, train_x, train_y, test_x, test_y, epochs, w=None, print_step=None):
+    def __init__(
+            self,
+            train_x,
+            train_y,
+            test_x,
+            test_y,
+            epochs,
+            w=None,
+            print_step=None):
         self.l1_error = 0
         if w is None:
-            self.w0 = 2 * np.random.random((train_x.size / train_x.__len__(), 1)) - 1
+            self.w0 = 2 * \
+                np.random.random((train_x.size / train_x.__len__(), 1)) - 1
         else:
             self.w0 = w
         for j in xrange(1, epochs + 1):
             l1 = sigmoid(np.dot(train_x, self.w0))
             self.l1_error = train_y - l1
 
-            if (print_step is not None) and ((j % print_step == 0) or j == epochs):
+            if (print_step is not None) and (
+                    (j % print_step == 0) or j == epochs):
                 accuracy = self.calc_accuracy(test_x, test_y)
-                print("{},{},{}".format(j, np.mean(np.abs(self.l1_error)), accuracy))
+                print(
+                    "{},{},{}".format(
+                        j,
+                        np.mean(
+                            np.abs(
+                                self.l1_error)),
+                        accuracy))
 
             adjustment = self.l1_error * sigmoid(l1, deriv=True)
             self.w0 += train_x.T.dot(adjustment) * learning_rate

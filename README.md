@@ -19,5 +19,20 @@ This project is focused on solving weight optimization, using Genetic Algorithms
 Comparison of the loss of the GDNN, choosing the best NN within each generation (where each generations occurs within 600 epochs),  vs the loss of DNN.
 ![](img/loss.png)
 
+## Linting
 
+-   **Style: ** PEP8
+[PEP8](https://www.python.org/dev/peps/pep-0008/ "Pep 8")
+
+### Versioning
+
+-   pylint 2.2.2
+-   astroid 2.1.0
+-   autopep8 1.4.3 (pycodestyle: 2.4.0)
+
+
+### Linting scripts
+
+-   Error check: `pylint src`
+-   Error fix:  `autopep8 --in-place --aggressive --aggressive src`
 
