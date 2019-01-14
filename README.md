@@ -21,7 +21,7 @@ Comparison of the loss of the GDNN, choosing the best NN within each generation 
 
 ## Linting
 
--   **Style: ** PEP8
+-   **Style:** PEP8
 [PEP8](https://www.python.org/dev/peps/pep-0008/ "Pep 8")
 
 ### Versioning
