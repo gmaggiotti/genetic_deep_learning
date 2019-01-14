@@ -13,7 +13,6 @@ install:
   - pip install -r requirements.txt
   
 before_commit:
-  - pylint src
   - autopep8 --in-place --aggressive --aggressive src/DNN_one_layer.py
   - autopep8 --in-place --aggressive --aggressive src/GDNN_one_layer.py
   - autopep8 --in-place --aggressive --aggressive src/NN1.py
