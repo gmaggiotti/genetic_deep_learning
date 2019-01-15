@@ -5,3 +5,4 @@
 .coveralls.yml
 /.pytest_cache
 setup.py
+strategy.ini
