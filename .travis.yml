@@ -15,11 +15,11 @@ before_commit:
   - autopep8 --in-place --aggressive --aggressive src/NN1.py
 
 before_script:
-  #- liccheck -s strategy.ini -r requirements.txt
+  - liccheck -s strategy.ini -r requirements.txt
   - safety check -r requirements.txt
 
 script:
   - pytest --cov=src src/test.py
   
 after_success:
-  - coveralls runs
+  - coveralls

@@ -19,7 +19,7 @@ pytest==4.1.1
 pytest-cov==2.6.1
 python-coveralls==2.9.1
 liccheck==0.3.3
-coverage==4.5.2
+coverage==4.0.3
 configparser==3.5.0
 argparse==1.4.0
 requests==2.21.0
