@@ -58,7 +58,6 @@ class gdnn:
                 population += [tuple((aux.get_error(), aux))]
             gen[x] = sort_by_fittest(population,Type.error)
             net = gen[x][0][1]
-            print("{},{},{}".format((x + 1) * epochs, net.get_error(), net.calc_accuracy(test_x, test_y)))
             result.append("{},{},{}".format((x + 1) * epochs, net.get_error(), net.calc_accuracy(test_x, test_y)))
             
             del population
