@@ -8,13 +8,11 @@ This project aims to use genetic algorithms to boost the learning of DNN.  Build
 
 Main problems to solve with NN:
 
-- Architecture optimization:finding optimal layers and number of nodes in each layer of the network required to capture features from given data.
-- Hyperparameter optimization: refers to choosing values of hyperparameters like - learning rate, optimization algorithm, dropout rate, batch size, etc. 
-
-- Weight optimization: find the right values for each neuron within each weight in order to solve the general equation with a minimum error.
+-   Architecture optimization:finding optimal layers and number of nodes in each layer of the network required to capture features from given data.
+-   Hyperparameter optimization: refers to choosing values of hyperparameters like - learning rate, optimization algorithm, dropout rate, batch size, etc. 
+-   Weight optimization: find the right values for each neuron within each weight in order to solve the general equation with a minimum error.
 
 This project is focused on solving weight optimization, using Genetic Algorithms combined with Gradient Descent and implement a method to make the process faster.
-
 
 ## Intuition of how gradients of the new generations improves the chosen slope when mating the fittest
 
@@ -23,14 +21,11 @@ This project is focused on solving weight optimization, using Genetic Algorithms
 
 Comparison of the loss of the GDNN, choosing the best NN within each generation (where each generations occurs within 600 epochs),  vs the loss of DNN.
 
-
 ![](img/loss.png)
-
 
 ## Set-up
 
 ` pip install -r requirements.txt `
-
 
 ## Example Usage
 
@@ -55,9 +50,6 @@ returns
 
 ```
 
-
-
-
 ## Linting
 
 -   **Style:** PEP8
@@ -68,7 +60,6 @@ returns
 -   pylint 2.2.2
 -   astroid 2.1.0
 -   autopep8 1.4.3 (pycodestyle: 2.4.0)
-
 
 ### Linting scripts
 

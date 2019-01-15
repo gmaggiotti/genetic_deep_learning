@@ -10,6 +10,7 @@ install:
 before_commit:
   - autopep8 --in-place --aggressive --aggressive src/DNN_one_layer.py
   - autopep8 --in-place --aggressive --aggressive src/GDNN_one_layer.py
+  - autopep8 --in-place --aggressive --aggressive src/test.py
   - autopep8 --in-place --aggressive --aggressive src/NN1.py
 
 
