@@ -1,5 +1,5 @@
 import numpy as np
-#from nn_utils import sigmoid
+from nn_utils import sigmoid
 
 learning_rate = 0.001
 

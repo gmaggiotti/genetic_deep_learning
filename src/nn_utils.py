@@ -1,5 +1,4 @@
 import numpy as np
-from src.nn_utils import sigmoid
 
 
 def enum(**enums):
