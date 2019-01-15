@@ -29,12 +29,15 @@ Comparison of the loss of the GDNN, choosing the best NN within each generation 
 
 ## Set-up
 
+` pip install -r requirements.txt `
+
+
 ## Example Usage
 
 ```python
 
 from GDNN_one_layer import gdnn
-gdnn = gdnn(1)
+gdnn = gdnn()
 
 dbpath = "/../dataset/data-500.csv"
 X, Y = gdnn.read_dataset(dbpath, 500)
