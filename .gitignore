@@ -2,3 +2,8 @@
 *.pyc
 *.iml
 .ipynb_checkpoints/
+.coveralls.yml
+/.pytest_cache
+setup.py
+strategy.ini
+/src/test.py

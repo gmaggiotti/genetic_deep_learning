@@ -1,0 +1,25 @@
+language: python
+python:
+  - "2.7"
+#  - "3.6"
+#  - "3.7-dev"  
+
+install:
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  
+before_commit:
+  - autopep8 --in-place --aggressive --aggressive src/DNN_one_layer.py
+  - autopep8 --in-place --aggressive --aggressive src/GDNN_one_layer.py
+  - autopep8 --in-place --aggressive --aggressive src/test.py
+  - autopep8 --in-place --aggressive --aggressive src/NN1.py
+
+before_script:
+  - safety check -r requirements.txt
+
+script:
+ # - pytest --cov=src src/test.py
+   - python src/GDNN_one_layer.py
+ 
+after_success:
+ # - coveralls
