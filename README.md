@@ -26,6 +26,7 @@ Comparison of the loss of the GDNN, choosing the best NN within each generation 
 
 ## Set-up
 
+` git clone https://github.com/gmaggiotti/genetic_deep_learning `
 ` pip install -r requirements.txt `
 
 ## Example Usage
