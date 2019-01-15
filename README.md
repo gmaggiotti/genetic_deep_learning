@@ -69,3 +69,4 @@ returns
 -   Error check: `pylint src`
 -   Error fix:  `autopep8 --in-place --aggressive --aggressive src`
 
+Copyright (c) 2018 Gabriel A. Maggiotti

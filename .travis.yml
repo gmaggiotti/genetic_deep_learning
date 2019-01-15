@@ -18,7 +18,8 @@ before_script:
   - safety check -r requirements.txt
 
 script:
-  - pytest --cov=src src/test.py
-  
+ # - pytest --cov=src src/test.py
+   - python src/GDNN_one_layer.py
+ 
 after_success:
-  - coveralls
+ # - coveralls
