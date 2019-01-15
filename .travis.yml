@@ -16,7 +16,8 @@ before_commit:
 
 # command to run tests
 script:
-  - pytest --cov=gdnn src/test.py
+  #- pytest --cov=gdnn src/test.py
+  - py.test src/test.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
   
 after_success:
   - coveralls
