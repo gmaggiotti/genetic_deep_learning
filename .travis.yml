@@ -15,7 +15,6 @@ before_commit:
   - autopep8 --in-place --aggressive --aggressive src/NN1.py
 
 before_script:
-  - liccheck -s strategy.ini -r requirements.txt
   - safety check -r requirements.txt
 
 script:
