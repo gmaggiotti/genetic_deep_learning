@@ -7,7 +7,7 @@ import os
 
 
 class gdnn:
-    def __init__(nlayers):
+    def __init__(self, nlayers):
         self.nlayers = 1
 
     def read_dataset(dbpath, size):
