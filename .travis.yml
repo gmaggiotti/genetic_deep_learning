@@ -16,4 +16,7 @@ before_commit:
 
 # command to run tests
 script:
-  - pytest src/test.py
+  - pytest --cov=gdnn src/test.py coveralls -v --cov coveralls --cov-report
+  
+after_success:
+  - coveralls

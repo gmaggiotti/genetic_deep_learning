@@ -2,4 +2,5 @@
 *.pyc
 *.iml
 .ipynb_checkpoints/
+.coveralls.yml
 /.pytest_cache

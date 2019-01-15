@@ -16,6 +16,9 @@ pluggy==0.8.1
 py==1.7.0
 pycodestyle==2.4.0
 pytest==4.1.1
+pytest-cov==2.6.1
+python-coveralls==2.9.1
+coverage==4.5.2
 requests==2.21.0
 scikit-learn==0.20.2
 scipy==1.2.0
