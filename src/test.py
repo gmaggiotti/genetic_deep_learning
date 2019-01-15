@@ -4,11 +4,10 @@ import numpy as np
 from sklearn.utils import shuffle
 from sklearn.model_selection import train_test_split
 
-gdnn = gdnn()
+gdnn = gdnn(1)
 
 dbpath = "/../dataset/data-500.csv"
 X, Y = gdnn.read_dataset(dbpath, 500)
-print(X, Y)
 result = gdnn.process(X, Y)
 
 print(result)
