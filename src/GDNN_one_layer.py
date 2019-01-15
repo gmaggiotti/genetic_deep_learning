@@ -10,7 +10,7 @@ class gdnn:
     def __init__(self, nlayers):
         self.nlayers = 1
 
-    def read_dataset(dbpath, size):
+    def read_dataset(self, dbpath, size):
         path = os.path.dirname(os.path.abspath(__file__))
         dataset = np.loadtxt(
             path +
@@ -30,7 +30,7 @@ class gdnn:
         X = 2 * X / float(max) - 1
         return shuffle(X, Y, random_state=1)
 
-    def process(X, Y):
+    def process(self, X, Y):
         train_x, test_x, train_y, test_y = train_test_split(X, Y, test_size=0.2, random_state=1)
 
         epochs = 600
