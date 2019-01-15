@@ -15,5 +15,5 @@ before_commit:
 
 # command to run tests
 script:
-  - python test.py
+  - python src/test.py
 #  - pytest
