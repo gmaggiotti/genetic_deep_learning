@@ -9,7 +9,7 @@ size = 500
 
 def read_dataset():
     path = os.path.dirname(os.path.abspath(__file__))
-    dataset = np.loadtxt(path + "/../dataset/data-500.csv", delimiter=",", skiprows=1, usecols=range(1,180))[0:size]
+    dataset = np.loadtxt(path + "/../dataset/data-500.csv", delimiter=",", skiprows=1, usecols=range(1, 180))[0:size]
     neurons = dataset.shape[1] - 1
     X = dataset[:, 0:neurons]
     Y = dataset[:, neurons].reshape(X.__len__(), 1)
