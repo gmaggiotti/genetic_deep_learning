@@ -53,4 +53,4 @@ class NN3:
         l2 = sigmoid(np.dot(l1, self.w1))
         l3 = sigmoid(np.dot(l2, self.w2))
         y_error = test_y - l3
-        return 1 - np.mean(np.abs(y_error))
+        return 1 - np.mean(np.abs(y_error)), np.std(y_error)

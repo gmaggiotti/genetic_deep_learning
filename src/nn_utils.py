@@ -5,7 +5,7 @@ import os
 
 def read_dataset(features, rows):
     path = os.path.dirname(os.path.abspath(__file__))
-    dataset = np.loadtxt(path + "/../dataset/data-500.csv", delimiter=",", skiprows=1, usecols=range(1, features))\
+    dataset = np.loadtxt(path + "/../dataset/data-400.csv", delimiter=",", skiprows=1, usecols=range(1, features))\
         [0:rows]
     neurons = dataset.shape[1] - 1
     X = dataset[:, 0:neurons]

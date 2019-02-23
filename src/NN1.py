@@ -40,4 +40,4 @@ class NN1:
     def calc_accuracy(self, test_x, test_y):
         prime_y = sigmoid(np.dot(test_x, self.w0))
         y_error = test_y - prime_y
-        return 1 - np.mean(np.abs(y_error))
+        return 1 - np.mean(np.abs(y_error)), np.std(y_error)
