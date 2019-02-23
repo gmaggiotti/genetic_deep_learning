@@ -1,7 +1,7 @@
 import numpy as np
 from nn_utils import sigmoid
 
-learning_rate = 0.01
+learning_rate = 0.001
 
 
 class NN3:

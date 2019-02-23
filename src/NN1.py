@@ -5,15 +5,7 @@ learning_rate = 0.001
 
 
 class NN1:
-    def __init__(
-            self,
-            train_x,
-            train_y,
-            test_x,
-            test_y,
-            epochs,
-            w=None,
-            print_step=None):
+    def __init__(self, train_x, train_y, test_x, test_y, epochs, w=None, print_step=None):
         self.l1_error = 0
         self.neurons = train_x.shape[1]
         self.Xavier = np.sqrt(1.0 / 2 * self.neurons)

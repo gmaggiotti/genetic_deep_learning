@@ -12,7 +12,8 @@ def read_dataset(features, rows):
     Y = dataset[:, neurons].reshape(X.__len__(), 1)
     Y[Y > 1] = 0
     # Improving gradient descent through feature scaling
-    X = 2 * X / np.amax(X,0) - 1
+    # X = 2 * X / np.amax(X,0) - 1
+    X = 2 * X / float(100) - 1
     return shuffle(X, Y, random_state=1)
 
 
