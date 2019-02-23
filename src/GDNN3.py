@@ -8,7 +8,7 @@ train_x, test_x, train_y, test_y = train_test_split(X, Y, test_size=0.3, random_
 
 epochs = 600
 best_n_children = 4
-population_size = 10
+population_size = 20
 gen = {}
 generations = 10
 
@@ -16,7 +16,8 @@ generations = 10
 ## ordered by the best performers (low error)
 init_pob = [NN3(train_x, train_y, test_x, test_y, epochs) for i in range(population_size)]
 init_pob = sort_by_fittest([(nn.calc_accuracy(test_x, test_y), nn) for nn in init_pob], Type.accuracy)
-print("600,{}".format(init_pob[0][1].get_error()))
+print("600,{},{}".format(init_pob[0][1].get_error(),init_pob[0][1].calc_accuracy(test_x, test_y)))
+
 gen[0] = init_pob
 
 for x in range(1, generations):
