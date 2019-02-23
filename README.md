@@ -22,7 +22,8 @@ This project is focused on solving weight optimization, using Genetic Algorithms
 
 Comparison of the loss of the GDNN, choosing the best NN within each generation (where each generations occurs within 600 epochs),  vs the loss of DNN.
 
-![](img/acc.png)
+![](img/error2.png)
+![](img/acc2.png)
 
 ## Set-up
 
