@@ -45,7 +45,8 @@ epochs = 600
 population_size = 10
 generations = 10
 
-run_GDNN_model(NN1, epochs, population_size, generations)
+dataset = train_x, train_y, test_x, test_y
+run_GDNN_model(NN1, epochs, population_size, generations, dataset)
 
 ```
 
