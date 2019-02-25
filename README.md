@@ -34,15 +34,18 @@ Comparison of the loss of the GDNN, choosing the best NN within each generation 
 ## Example Usage
 
 ```python
+from NN1 import NN1
+from sklearn.model_selection import train_test_split
+from nn_utils import run_GDNN_model, read_dataset
 
-from GDNN_one_layer import gdnn
-gdnn = gdnn(1)
+X, Y = read_dataset(180, 500)
+train_x, test_x, train_y, test_y = train_test_split(X, Y, test_size=0.3, random_state=1)
 
-dbpath = "/../dataset/data-500.csv"
-X, Y = gdnn.read_dataset(dbpath, 500)
-result = gdnn.process(X, Y)
+epochs = 600
+population_size = 10
+generations = 10
 
-print(result)
+run_GDNN_model(NN1, epochs, population_size, generations)
 
 ```
 
