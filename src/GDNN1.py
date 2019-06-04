@@ -10,3 +10,4 @@ population_size = 10
 generations = 10
 
 run_GDNN_model(NN1, epochs, population_size, generations, dataset)
+
